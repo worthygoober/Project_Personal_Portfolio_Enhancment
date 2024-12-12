@@ -1,0 +1,237 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #D4AF37;
+    background-color: rgb(13, 34, 138);
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(images/layout.jpg);
+    background-size: cover;
+    background-position-y: 30%;
+    color: #C0C0C0;
+    text-align: center;
+    padding: 125px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 4px 4px rgba(255, 255, 255, 0.5);
+}
+
+nav {
+    background-image: linear-gradient(rgb(3, 27, 62), rgb(13, 34, 138));
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #D4AF37;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #C0C0C0;
+}
+
+main {
+    padding: 20px;
+    background-color: #052240;
+    color: #D4AF37;
+    border: 2px solid #C0C0C0;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+main section {
+    display: block;
+    text-align: center;
+}
+
+main section img {
+    width: 300px;
+    height: auto;
+}
+main ul {
+    list-style: none;
+}
+
+button, .contact form button {
+    background-color: rgb(13, 34, 138);
+    transition: transform background-color color 0.3s;
+    font-size: 1rem;
+    padding: 7px 10px;
+}
+
+button li a, .contact form button {
+    color: #C0C0C0;
+    text-decoration: none;
+}
+
+button li a:hover {
+    color: rgb(3, 27, 62);
+}
+
+button:hover, button:focus, .contact form button:hover, .contact form button:focus {
+    background-color: darkgoldenrod;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+button:active, .contact form button:active {
+    animation: clickGrow 0.2s;
+}
+
+@keyframes clickGrow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2)
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer {
+    background-image: linear-gradient(rgb(13, 34, 138), rgb(3, 27, 62));
+    color: #C0C0C0;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #D4AF37;
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgb(3, 27, 62);
+    color: #C0C0C0;
+    border: 1px solid #D4AF37;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #D4AF37;
+}
+
+table th {
+    background-color: rgb(13, 34, 138);
+    color: #D4AF37;
+    font-weight: bold;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+table tr:hover {
+    background-color: rgba(212, 175, 55, 0.2);
+    transition: background-color 0.3s;
+}
+
+.skills {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgb(3, 27, 62);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.skills h2 {
+    color: #D4AF37;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border-left: 4px solid #D4AF37;
+    transition: background-color 0.3s, border-left-color 0.3s;
+}
+
+.skills ul li:hover {
+    background-color: rgba(212, 175, 55, 0.2);
+    border-left-color: #C0C0C0;
+}
+
+.projects img {
+    width: 300px;
+    height: auto;
+    transition: transform 1.0s ease;
+}
+
+.projects img:hover {
+    transform: scale(4);
+    cursor: pointer;
+}
+
+.projects a {
+    text-decoration: none;
+    color: #D4AF37;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+    
+.projects a:hover, .projects a:focus {
+    color: #C0C0C0;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        font-size: 1.8rem;
+        padding: 100px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        border: none;
+        margin: 0;
+        padding: 10px;
+    }
+
+    table, ul {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
